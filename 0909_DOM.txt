@@ -1,0 +1,4 @@
+# DOM : html 의 모든 태그들을 가져다가 javascript의 객체로 만들어둔 것.
+
+# querySelector() : 노드의 첫번째 자식을 반환함.
+   getElementBy*() : 대상들을 배열로 반환. 하나일 경우에도 배열.

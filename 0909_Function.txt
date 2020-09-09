@@ -1,0 +1,6 @@
+function sayHello(const name) {} --> (X)
+function sayHello(name){} --> (O)
+
+   --> 함수 인자 따로 선언하지 않아도 됨.
+	& 인자로 배열이나 객체도 가능!
+

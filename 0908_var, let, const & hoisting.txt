@@ -1,0 +1,85 @@
+var 는 function-scoped 이고
+let, const 는 block-scoped 이다.
+
+*hoisting: 끌어올린다는 뜻. javascript에서의 hoisting은, 코드에 선언된 변수 및 함수를 코드 상단으로 끌어올리는 것을 뜻함. (선언과 할당을 분리하여, 선언만 끌어올려짐!)
+
+(ex1) ---
+foo = 'bar';
+var foo; 
+
+위 구문과 아래 구문은 같은 의미임.
+
+var foo;
+foo = 'bar';
+
+(ex2) ---
+(function() {
+  // var 변수는 여기까지 hoisting이 된다. (해당 함수 내)
+  console.log('before loop i is', i); // no error.
+  for(var i=0; i<10; i++) {
+    console.log('i', i)
+  }
+})()
+
+console.log('after loop i is', i) // ReferenceError: i is not defined
+
+***주의! 함수 내에서 변수 선언 명령어(var)를 제외하고 값을 할당할 경우, 전역변수로 선언됨. ***
+-------------------------------------------------------------------------------
+javascript에 var만 존재했을 땐 문제가 많았다.
+그래서 let, const가 추가되었다.
+
+(ex)
+var a = 'test';
+var a = 'test2';
+
+위 구문과
+
+c = 'test';
+var c;
+
+이 구문 모두 에러가 발생하지 않는다.
+
+let과 const는 var와 달리 변수 재선언이 불가능하고, 초기화하기 전 사용이 불가능함.
+
+let로 선언된 변수는 재할당은 가능하지만,
+const로 선언된 변수는 재할당도 불가능하다.
+
+-----------------------------------------------------------------------------
+let, const도 hoisting이 발생하긴 한다! *다만, let과 const는 TDZ(Temporal Dead Zone)에 의해 제약을 받는다.
+
+& var와는 달리 block-scoped 단위로 hoisting.
+
+(ex1)
+console.log(x);
+let x = 'hey';
+
+--> var처럼 undefined를 반환하지 않고, ReferenceError가 발생한다. (초기화하기 전 사용불가.)
+
+(ex2)
+const x = 'outer scope';
+(function() {
+  console.log(x);
+  const x = 'inner scope';
+}());
+
+--> ReferenceError 발생. const도 hoisting을 수행하는 것을 알 수 있다.
+(수행 안한다면 console에 'outer scope'가 출력되었을 것.)
+
+-----------------------------------------------------------------------------
+let도 hoisting이 된다면, 아래 두 구문 모두 문제가 없어야 하지 않나?
+
+c = 'test';
+let c;
+
+let c; 
+c = 'test';
+
+왜 다르지? hoisting된 선언이랑 let c; 랑 어떻게 다른거지? 
+*** 내일 마저 알아보기
+
+<참고>
+https://gist.github.com/LeoHeo/7c2a2a6dbcf80becaaa1e61e90091e5d#varfunction-scoped
+
+https://medium.com/korbit-engineering/let%EA%B3%BC-const%EB%8A%94-%ED%98%B8%EC%9D%B4%EC%8A%A4%ED%8C%85-%EB%90%A0%EA%B9%8C-72fcf2fac365
+
+https://junhobaik.github.io/js-let-cont-hoisting/#%EA%B8%B0%EC%A1%B4%EC%9D%98-hoisting

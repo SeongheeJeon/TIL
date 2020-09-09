@@ -1,0 +1,12 @@
+# 블럭씌우고 ' 또는 " 입력시 해당 블럭이 따옴표 처리됨.
+
+# Backtick ``````
+    -> console.log(`Hello ${name}, you are ${age} years old.`); 이렇게 사용.
+    -> ${} : 중괄호 안에 있는 것들을 문자열로 반환. 
+    -> `hello, ${myName()}` 
+
+# HTML / CSS / JavaScript 각각 분리해서 잘 사용하자.
+   --> CSS에서 가능한 것을 굳이 JavaScript에서 하지말기.
+
+# form 을 submit 할 경우, 새로운 페이지로 이동(새로고침) 됨.
+  -> 이것을 막으려면 event.preventDefault() 해줘야함.
