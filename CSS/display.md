@@ -7,7 +7,7 @@
 
 - 상속 안됨.
 - `display` 속성의 키워드 값은 6개의 카테고리로 분류할 수 있다.
-    - Outside : block, inline, run-in
+    - Outside : [block](#block), inline, run-in
     - Inside : flow, flow-root, table, flex, grid, ruby
     - List Item : list-item
     - Internal : table-#, ruby-#
