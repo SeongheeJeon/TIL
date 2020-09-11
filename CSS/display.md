@@ -7,16 +7,12 @@
 
 - 상속 안됨.
 - `display` 속성의 키워드 값은 6개의 카테고리로 분류할 수 있다.
-    - Outside : [block](#block), inline, run-in
+    - Outside : [block](#block), [inline](#inline), run-in
     - Inside : flow, flow-root, table, flex, grid, ruby
     - List Item : list-item
     - Internal : table-#, ruby-#
     - box : contents, none
-    - legacy : inline-block(=inline flow-root), inline-table(=inline table), inline-flex(=inline flex), inline-grid(=inline grid)
-
-## block
-
-- ex : `<div>`, `<p>`, `<h#>`
+    - legacy : [inline-block](#inline-block)(=inline flow-root), inline-table(=inline table), inline-flex(=inline flex), inline-grid(=inline grid)
 
 ## none
 
