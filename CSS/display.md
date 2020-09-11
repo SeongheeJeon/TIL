@@ -14,6 +14,9 @@
     - box : contents, none
     - legacy : inline-block(=inline flow-root), inline-table(=inline table), inline-flex(=inline flex), inline-grid(=inline grid)
 
+## block
+
+- ex : `<div>`, `<p>`, `<h#>`
 
 ## none
 
