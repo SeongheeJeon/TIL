@@ -35,11 +35,15 @@
     → 공백 없애기 위해서는 [여러 방법](https://css-tricks.com/fighting-the-space-between-inline-block-elements/ "참고 페이지")이 있는데,
     그 중 하나로 상위 요소의 font-size를 0으로 해주고,  
      &nbsp;&nbsp;&nbsp; 해당 inline요소의 font-size를 다시 설정해주면 된다.
+     
+ - inline보다 block이 상위요소이다. 그래서 inline에 block요소를 포함시킬 수 없다.
+    -> 특히 span의 경우, 텍스트의 일부를 선택할 때 사용하는게 본 용도이므로 단순히 구역을 나누는 용도 혹은 레이아웃을 위한 용도로 사용 지양하자.
 
 ## block
 
 - ex : `<div>`, `<p>`, `<h#>`
 - width, height, margin, padding 모두 설정 가능.
+    -> block 요소들의 위아래 여백은 겹쳐진다.
 - 한 줄의 영역을 차지하는 박스형태.
 - 기본적으로 width:100%
 
@@ -48,5 +52,7 @@
 - ex : `<button>`, `<select>`
 - inline처럼 배치되고 block처럼 크기, 여백을 줄 수 있다.
 - inline 처럼 좌우 공백이 생긴다. → 처리 방법 동일.
+- block이나 inline-block에서, 요소의 크기를 벗어나는 content를 처리하는 속성 : overflow
+
 
 ### flex, grid는 따로 포스팅.
