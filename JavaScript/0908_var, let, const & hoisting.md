@@ -1,6 +1,6 @@
 var 는 function-scoped 이고
 let, const 는 block-scoped 이다.
-
+ 
 *hoisting: 끌어올린다는 뜻. javascript에서의 hoisting은, 코드에 선언된 변수 및 함수를 코드 상단으로 끌어올리는 것을 뜻함. (선언과 할당을 분리하여, 선언만 끌어올려짐!)
 
 (ex1) ---
@@ -23,7 +23,7 @@ foo = 'bar';
 
 console.log('after loop i is', i) // ReferenceError: i is not defined
 
-***주의! 함수 내에서 변수 선언 명령어(var)를 제외하고 값을 할당할 경우, 전역변수로 선언됨. ***
+**주의! 함수 내에서 변수 선언 명령어(var)를 제외하고 값을 할당할 경우, 전역변수로 선언됨. **
 -------------------------------------------------------------------------------
 javascript에 var만 존재했을 땐 문제가 많았다.
 그래서 let, const가 추가되었다.
